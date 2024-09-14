@@ -8,7 +8,7 @@ export class LiderController {
   @Render('layouts/lider/index')
   index() {
     const viewData = [];
-    viewData['title'] = 'Minha Consultoria | Equipes';
+    viewData['title'] = 'Minha Consultoria | Lider';
     return {
       viewData: viewData,
     };
