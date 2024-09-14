@@ -1,6 +1,6 @@
 # minha-consultoria-equipes
 
-[[TOC]]
+[[_TOC_]]
 
 ## Projeto
 
@@ -72,12 +72,22 @@ npm run start:dev
   - parte visual do sistema, onde ficarão as páginas propriamente ditas
   - deve criar um arquivo .hbs para cada página
 - src/services
-  - ficarão os serviços que fazem contato direto com o banco de dados; para execução das queries
-- src/models
+  - ficarão os serviços que fazem algum tratamento para exibição na tela ou algo mais generico; para execução das queries
+- src/repository
+  - pasta para controle e acesso de entidades do banco de dados
   - classes de entidade do banco de dados. todas devem terminar com .entity.ts
     - exemplo: consultor.entity.ts
+- src/services
+  - serviços específicos que terão traramento para exibição na view
+  - podem consumir os serviços dos repositories
 - src/modules
   - funcionalidades que serão utilizadas nas views
     - nos arquivos .controller.ts, ficam as especificações de rotas daquela funcionalide e valores que poderão ser utilizados diretamente pelas views
       - podem consumir os services
     - os arquivos .module.ts expoem os controllers para uso de outras classes
+
+## Documentações úteis
+
+- [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- [TypeORM](https://docs.nestjs.com/recipes/sql-typeorm)
+- [NestJS](https://github.com/typeorm/typeorm)
