@@ -59,6 +59,9 @@ npm run start:dev
 
 ```
 
+> **Endereço local**:
+[http://localhost:3000/](http://localhost:3000/)
+
 ## Descrição das pastas
 
 - public
