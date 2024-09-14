@@ -1,85 +1,80 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# minha-consultoria-equipes
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+[[TOC]]
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Projeto
 
-## Description
+O minha-consultoria-equipes é um projeto Web desenvolvido como solução do Challenge Sprint 4 do 2o ano do curso de Sistemas de Informação na FIAP.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Este projeto é codificado em NodeJS e utiliza o framework [Nest](https://github.com/nestjs/nest), no padrão MVC.
 
-## Project setup
+### Resumo das tecnologias utilizadas
+
+- Nest v10.0.0
+- Jest v28.1.3
+- NodeJS v20.17.0
+- NPM v10.8.2
+
+## Preparação do ambiente
+
+- Clone o projeto na sua máquina:
 
 ```bash
-$ npm install
+git clone https://github.com/jamilligioielli/minha-consultoria-equipes.git
 ```
 
-## Compile and run the project
+- Instale a [versão 20.17.0 LTS do NodeJS](https://nodejs.org/download/release/v20.17.0/) *[*Node.js + NPM*](https://nodejs.dev/en/learn/how-to-install-nodejs/)*;
+  - Opte pela instalação via [NVM](https://github.com/nvm-sh/nvm) para gerenciar suas versões do NodeJS caso já tenha alguma versão anterior na sua máquina.
+  - Se nunca tiver instalado o NodeJS na sua máquina [baixe aqui pelo site oficial](https://nodejs.org/en/download/prebuilt-installer) e siga as instruções de instalação.
+
+Após baixar e configurar o node, dentro da pasta do projeto, instale as dependencias locais:
+
+`npm install`
+
+## Aplicação
+
+### Variaveis de ambiente
+
+As configurações sensiveis (credenciais de banco de dados) desse projeto ficam em variaveis de ambiente que estão localizadas no arquivo `.env`.
+
+O conteudo padrão do arquivo `.env` se encontra no arquivo `.env.defaults`, para copiá-lo basta inserir o seguinte comando no terminal:
 
 ```bash
-# development
-$ npm run start
+# No Linux/MAC:
+cp .env.defaults .env
 
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+# No Windows:
+copy .env.defaults .env
 ```
 
-## Run tests
+Após isso, preencha o conteúdo desse arquivo de acordo com suas credenciais.
+
+### Executando locamente
+
+Para rodar o projeto locamente, digite o seguinte comando no terminal:
 
 ```bash
-# unit tests
-$ npm run test
+# Desenvolvimento local
+npm run start:dev
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
 ```
 
-## Resources
+## Descrição das pastas
 
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+- public
+  - onde ficarão os arquivos de imagem e css do projeto
+- config
+  - onde estão as constantes de configuração
+- views/layouts
+  - parte visual do sistema, onde ficarão as páginas propriamente ditas
+  - deve criar um arquivo .hbs para cada página
+- src/services
+  - ficarão os serviços que fazem contato direto com o banco de dados; para execução das queries
+- src/models
+  - classes de entidade do banco de dados. todas devem terminar com .entity.ts
+    - exemplo: consultor.entity.ts
+- src/modules
+  - funcionalidades que serão utilizadas nas views
+    - nos arquivos .controller.ts, ficam as especificações de rotas daquela funcionalide e valores que poderão ser utilizados diretamente pelas views
+      - podem consumir os services
+    - os arquivos .module.ts expoem os controllers para uso de outras classes
