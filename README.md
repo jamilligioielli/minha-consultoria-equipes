@@ -1,7 +1,5 @@
 # minha-consultoria-equipes
 
-[[_TOC_]]
-
 ## Projeto
 
 O minha-consultoria-equipes é um projeto Web desenvolvido como solução do Challenge Sprint 4 do 2o ano do curso de Sistemas de Informação na FIAP.
@@ -49,9 +47,9 @@ copy .env.defaults .env
 
 Após isso, preencha o conteúdo desse arquivo de acordo com suas credenciais.
 
-### Executando locamente
+### Executando localmente
 
-Para rodar o projeto locamente, digite o seguinte comando no terminal:
+Para rodar o projeto localmente, digite o seguinte comando no terminal:
 
 ```bash
 # Desenvolvimento local
