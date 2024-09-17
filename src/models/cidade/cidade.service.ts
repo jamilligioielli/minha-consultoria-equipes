@@ -12,15 +12,4 @@ export class CidadeService {
   async findAll(): Promise<Cidade[]> {
     return this.cidadeRepository.query('SELECT * FROM CIDADE');
   }
-
-  async getCidade(): Promise<string> {
-    let a = '';
-    await this.findAll().then((cidade) => {
-      a = cidade[0]['NOME'];
-      console.log(cidade);
-      return a;
-    });
-
-    return a;
-  }
 }

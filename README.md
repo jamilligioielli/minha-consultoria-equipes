@@ -69,19 +69,18 @@ npm run start:dev
 - views/layouts
   - parte visual do sistema, onde ficarão as páginas propriamente ditas
   - deve criar um arquivo .hbs para cada página
-- src/services
-  - ficarão os serviços que fazem algum tratamento para exibição na tela ou algo mais generico; para execução das queries
-- src/repository
-  - pasta para controle e acesso de entidades do banco de dados
-  - classes de entidade do banco de dados. todas devem terminar com .entity.ts
+- src/models
+  - pasta para manipulação do banco de dados
+  - possui serviços para criação das querys
+    - exemplo:  consultor.service.ts
+  - possui classes de entidade do banco de dados. todas devem terminar com .entity.ts
     - exemplo: consultor.entity.ts
-- src/services
-  - serviços específicos que terão traramento para exibição na view
-  - podem consumir os serviços dos repositories
-- src/modules
+  - os arquivos .module.ts expoem as models para uso de outras classes
+- src/controllers
   - funcionalidades que serão utilizadas nas views
     - nos arquivos .controller.ts, ficam as especificações de rotas daquela funcionalide e valores que poderão ser utilizados diretamente pelas views
-      - podem consumir os services
+    - possuem serviços (*.service.ts) específicos que terão tratamento para exibição na view
+      - podem consumir os serviços das models
     - os arquivos .module.ts expoem os controllers para uso de outras classes
 
 ## Documentações úteis

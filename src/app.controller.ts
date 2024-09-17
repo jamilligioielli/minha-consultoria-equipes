@@ -1,17 +1,14 @@
 import { Controller, Get, Render } from '@nestjs/common';
-// import { AppService } from './app.service';
-import { CidadeService } from './repository/cidade/cidade.service';
+import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly cidadeService: CidadeService) {}
+  constructor(private readonly appService: AppService) {}
 
   @Get('/')
   @Render('index')
   async index() {
-    const viewData = [];
-    viewData['title'] = 'Minha Consultoria | Equipes';
-    viewData['cidade'] = await this.cidadeService.getCidade();
+    const viewData = await this.appService.getViewData();
     return {
       viewData: viewData,
     };

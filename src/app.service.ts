@@ -2,7 +2,11 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  getViewData(): string {
-    return 'Hello World';
+  constructor() {}
+
+  async getViewData(): Promise<any> {
+    return {
+      title: 'Minha Consultoria | Equipes',
+    };
   }
 }
