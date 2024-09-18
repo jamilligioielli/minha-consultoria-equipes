@@ -8,6 +8,7 @@ export class PessoaService {
     @Inject('PESSOA_REPOSITORY')
     private pessoaRepository: Repository<Pessoa>,
   ) {}
+  
   createPessoa(cpf: string, email: string, celular: string, tipo: string, idEndereco: number): void {
     this.pessoaRepository.query(`INSERT PESSOA (cpf, email, celular, tipo, id_endereco) VALUES (${cpf}, ${email}, ${celular}, ${tipo}, ${idEndereco})`);
     console.log("Pessoa inserida com sucesso");

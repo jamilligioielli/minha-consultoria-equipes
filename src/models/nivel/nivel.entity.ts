@@ -1,10 +1,12 @@
 import { Entity, PrimaryColumn, Column } from 'typeorm';
 
-@Entity('LIDER')
-export class Lider {
+@Entity('NIVEL')
+export class Nivel {
   @PrimaryColumn()
-  id_lider: number;
+  id_nivel: number;
 
   @Column()
-  id_consultor: string;
+  nome_nivel: string;
+  pontuacao_minima: number;
+  pontuacao_maxima: number;
 }
