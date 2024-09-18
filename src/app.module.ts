@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
-import { LiderModule } from './controllers/lider/liderData.module';
+import { LiderDataModule } from './controllers/lider/liderData.module';
 import oracleConfig from 'config/oracle.config';
 
 @Module({
@@ -12,7 +12,7 @@ import oracleConfig from 'config/oracle.config';
       isGlobal: true,
       envFilePath: '.env',
     }),
-    LiderModule,
+    LiderDataModule,
   ],
   controllers: [AppController],
   providers: [AppService],
