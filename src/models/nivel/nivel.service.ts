@@ -9,12 +9,15 @@ export class NivelService {
     private nivelRepository: Repository<Nivel>,
   ) {}
 
-  createNivel(nomeNivel: string, pontuacaoMaxima: number, pontuacaoMinima: number): void {
-    this.nivelRepository.query(`INSERT NIVEL (nome_nivel, pontuacao_minima, pontuacao_maxima) VALUES (${nomeNivel}, ${pontuacaoMaxima},  ${pontuacaoMinima})`);
-    console.log("Nivel inserido com sucesso");
+  async createNivel(nomeNivel: string, pontuacaoMaxima: number, pontuacaoMinima: number): Promise<Nivel[]> {
+    return this.nivelRepository.query(`INSERT INTO NIVEL (nome_nivel, pontuacao_minima, pontuacao_maxima) VALUES ('${nomeNivel}', ${pontuacaoMaxima},  ${pontuacaoMinima})`);
   }
 
   async findAll(): Promise<Nivel[]> {
     return this.nivelRepository.query('SELECT * FROM NIVEL');
+  }
+
+  async findById(idNivel: number): Promise<Nivel[]> {
+    return this.nivelRepository.query(`SELECT * FROM NIVEL WHERE id_nivel = ${idNivel}`);
   }
 }

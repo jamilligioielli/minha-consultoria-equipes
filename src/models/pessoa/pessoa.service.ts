@@ -9,12 +9,15 @@ export class PessoaService {
     private pessoaRepository: Repository<Pessoa>,
   ) {}
   
-  createPessoa(cpf: string, email: string, celular: string, tipo: string, idEndereco: number): void {
-    this.pessoaRepository.query(`INSERT PESSOA (cpf, email, celular, tipo, id_endereco) VALUES (${cpf}, ${email}, ${celular}, ${tipo}, ${idEndereco})`);
-    console.log("Pessoa inserida com sucesso");
+  async createPessoa(cpf: string, email: string, celular: string, tipo: string, idEndereco: number): Promise<Pessoa[]> {
+    return this.pessoaRepository.query(`INSERT INTO PESSOA (cpf, email, celular, tipo, id_endereco) VALUES ('${cpf}', '${email}', '${celular}', '${tipo}', ${idEndereco})`);
   }
 
   async findAll(): Promise<Pessoa[]> {
     return this.pessoaRepository.query('SELECT * FROM PESSOA');
+  }
+
+  async findById(idConsultor: number): Promise<Pessoa[]> {
+    return this.pessoaRepository.query(`SELECT * FROM PESSOA WHERE id_pessoa = ${idConsultor}`);
   }
 }

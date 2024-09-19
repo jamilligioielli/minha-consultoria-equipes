@@ -23,7 +23,6 @@ export class PessoaDataService {
 
   async getPessoa(): Promise<Pessoa[]> {
     return this.pessoaService.findAll().then((pessoa) => {
-      console.log(`Pessoa ${pessoa}`);
       return pessoa;
     });
   }

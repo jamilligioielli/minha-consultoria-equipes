@@ -9,12 +9,15 @@ export class LiderService {
     private liderRepository: Repository<Lider>,
   ) {}
 
-  createLider(idLider: number, idConsultor: number): void {
-    this.liderRepository.query(`INSERT LIDER (id_lider, id_consultor) VALUES (${idLider}, ${idConsultor})`);
-    console.log("Insert com sucesso");
+  async createLider(idLider: number, idConsultor: number):  Promise<Lider[]> {
+    return this.liderRepository.query(`INSERT INTO LIDER (id_lider, id_consultor) VALUES (${idLider}, ${idConsultor})`);
   }
 
   async findAll(): Promise<Lider[]> {
     return this.liderRepository.query('SELECT * FROM LIDER');
+  }
+
+  async findById(idLider: number): Promise<Lider[]> {
+    return this.liderRepository.query(`SELECT * FROM LIDER WHERE id_lider = ${idLider}`);
   }
 }
