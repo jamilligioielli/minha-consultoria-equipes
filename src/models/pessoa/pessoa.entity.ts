@@ -6,6 +6,7 @@ export class Pessoa {
   id_consultor: number;
 
   @Column()
+  nome: string;
   cpf: string;
   email: string;
   celular: string;

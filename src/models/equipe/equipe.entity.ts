@@ -1,4 +1,4 @@
-import { Entity, PrimaryColumn, Column } from 'typeorm';
+import { Entity, PrimaryColumn, Column, ManyToMany } from 'typeorm';
 
 @Entity('EQUIPE')
 export class Equipe {
@@ -10,6 +10,7 @@ export class Equipe {
   link_grupo_bate_papo: string;
   valor_bonus_total_ciclo: number;
   valor_bonus_estimado_ciclo: number;
+  descricao: string;
   id_status: number;
   id_lider: number;
   id_consultor: number;

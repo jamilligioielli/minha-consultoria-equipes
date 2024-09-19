@@ -17,7 +17,7 @@ export class NivelService {
     return this.nivelRepository.query('SELECT * FROM NIVEL');
   }
 
-  async findById(idNivel: number): Promise<Nivel[]> {
+  async findById(idNivel: number): Promise<Nivel> {
     return this.nivelRepository.query(`SELECT * FROM NIVEL WHERE id_nivel = ${idNivel}`);
   }
 }

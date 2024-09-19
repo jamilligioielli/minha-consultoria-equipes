@@ -17,7 +17,7 @@ export class LiderService {
     return this.liderRepository.query('SELECT * FROM LIDER');
   }
 
-  async findById(idLider: number): Promise<Lider[]> {
+  async findById(idLider: number): Promise<Lider> {
     return this.liderRepository.query(`SELECT * FROM LIDER WHERE id_lider = ${idLider}`);
   }
 }

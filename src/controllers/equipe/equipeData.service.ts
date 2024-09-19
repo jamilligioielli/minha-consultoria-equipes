@@ -1,31 +1,33 @@
 import { Injectable } from '@nestjs/common';
-import { Equipe } from 'src/models/equipe/equipe.entity';
 import { EquipeViewData } from 'src/interfaces/equipeViewData';
+import { LiderService } from 'src/models/lider/lider.service';
+import { NivelService } from 'src/models/nivel/nivel.service';
 import { EquipeService } from 'src/models/equipe/equipe.service';
+import { PessoaService } from 'src/models/pessoa/pessoa.service';
+
 
 @Injectable()
 export class EquipeDataService {
   constructor(private readonly equipeService: EquipeService,
-    
+    private readonly liderService: LiderService,
+    private readonly nivelService: NivelService,
+    private readonly pessoaService: PessoaService,
   ) {}
 
-  async getViewData(): Promise<EquipeViewData> {
-    const equipe: Equipe[] = await this.getEquipe();
-    return {
-      nomeEquipe: equipe[0]['nome_equipe'],
-      linkGrupoBatePapo: equipe[0]['link_grupo_bate_papo'],
-      valorBonusTotalCiclo: equipe[0]['valor_bonus_total_ciclo'],
-      valorBonusEstimadoCiclo: equipe[0]['valor_bonus_estimado_ciclo'],
-      idStatus: equipe[0]['id_status'],
-      idLider: equipe[0]['id_lider'],
-      idConsultor: equipe[0]['id_consultor'],
-    };
-  }
-
-  async getEquipe(): Promise<Equipe[]> {
-    return this.equipeService.findAll().then((equipe) => {
-      console.log(`Equipe ${equipe}`);
-      return equipe;
-    });
-  }
+  // async getEquipe(): Promise<EquipeViewData[]> {    
+  //   this.equipeService.findAll().then(async equipe => {
+  //     return equipe.map(async equipe => {
+  //       let idLider = await this.liderService.finById(equipe.id_lider).then(a => a.id_lider)
+  //       let nomePessoa = await this.pessoaService.findById(idLider).then(a => a.nome)
+  //       let nomeNivel = await this.nivelService.findById(equipe.id_status).then(a => a.nome_nivel)
+  //       return {
+  //         nomeEquipe: equipe.nome_equipe,
+  //         descricao: equipe.descricao,
+  //         endereco: "Jardim Peri Peri, SP",
+  //         nomeLider: nomePessoa,
+  //         nivel: nomeNivel,
+  //       }
+  //     })
+  //   })
+  // }
 }

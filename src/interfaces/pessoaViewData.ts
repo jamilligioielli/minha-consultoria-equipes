@@ -1,9 +1,8 @@
 export interface PessoaViewData {
-    idConsultor: number;
-    cpf: string;
-    email: string;
-    celular: string;
-    tipo: string;
-    idEndereco: number;
+    nomePessoa: string;
+    totalVendido: number;
+    nivel: string;
+    qtdCliente: number;
+    nicho: string;
   }
   

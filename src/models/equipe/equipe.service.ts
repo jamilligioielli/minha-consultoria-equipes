@@ -9,9 +9,9 @@ export class EquipeService {
     private equipeRepository: Repository<Equipe>,
   ) {}
 
-  async createEquipe(nomeEquipe: string, linkGrupoBatePapo: string, valorBonusTotalCiclo: string, valorBonusEstimadoCiclo: string, idStatus: number, idLider: number, idConsultor: number): Promise<Equipe[]> {
-    return this.equipeRepository.query(`INSERT INTO EQUIPE (nome_equipe, link_grupo_bate_papo, valor_bonus_total_ciclo, valor_bonus_estimado_ciclo, id_status, id_lider, id_consultor) VALUES (
-      '${nomeEquipe}', '${linkGrupoBatePapo}', '${valorBonusTotalCiclo}', '${valorBonusEstimadoCiclo}', ${idStatus}, ${idLider}, ${idConsultor})`);
+  async createEquipe(nomeEquipe: string, linkGrupoBatePapo: string, valorBonusTotalCiclo: string, valorBonusEstimadoCiclo: string, idStatus: number, idLider: number, idConsultor: number, descricao?: string): Promise<Equipe[]> {
+    return this.equipeRepository.query(`INSERT INTO EQUIPE (nome_equipe, link_grupo_bate_papo, valor_bonus_total_ciclo, valor_bonus_estimado_ciclo, id_status, id_lider, id_consultor, descricao) VALUES (
+      '${nomeEquipe}', '${linkGrupoBatePapo}', '${valorBonusTotalCiclo}', '${valorBonusEstimadoCiclo}', ${idStatus}, ${idLider}, ${idConsultor}, '${descricao}')`);
   }
 
   async findAll(): Promise<Equipe[]> {
@@ -19,6 +19,6 @@ export class EquipeService {
   }
 
   async findById(idEquipe: number): Promise<Equipe[]> {
-    return this.equipeRepository.query(`SELECT * FROM EQUIPE WHERE id_equpe = ${idEquipe}`);
+    return this.equipeRepository.query(`SELECT * FROM EQUIPE WHERE id_equipe = ${idEquipe}`);
   }
 }

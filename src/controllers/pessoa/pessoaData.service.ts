@@ -21,9 +21,17 @@ export class PessoaDataService {
     };
   }
 
-  async getPessoa(): Promise<Pessoa[]> {
-    return this.pessoaService.findAll().then((pessoa) => {
-      return pessoa;
-    });
+  async getPessoa(): Promise<PessoaViewData[]> {    
+    this.pessoaService.findAll().then(async pessoa => {
+      return pessoa.map(async pessoa => {
+        return {
+          nomePessoa: pessoa.nome,
+          totalVendido: Math.floor(Math.random() * (500 - 0)),
+          nivel: string,
+          qtdCliente: number,
+          nicho: string,
+        }
+      })
+    })
   }
 }
