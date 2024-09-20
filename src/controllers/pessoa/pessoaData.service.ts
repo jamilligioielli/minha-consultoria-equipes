@@ -5,9 +5,7 @@ import { PessoaService } from 'src/models/pessoa/pessoa.service';
 
 @Injectable()
 export class PessoaDataService {
-  constructor(private readonly pessoaService: PessoaService,
-    
-  ) {}
+  constructor(private readonly pessoaService: PessoaService) {}
 
   async getViewData(): Promise<PessoaViewData> {
     const pessoa: Pessoa[] = await this.getPessoa();
@@ -21,17 +19,17 @@ export class PessoaDataService {
     };
   }
 
-  async getPessoa(): Promise<PessoaViewData[]> {    
-    this.pessoaService.findAll().then(async pessoa => {
-      return pessoa.map(async pessoa => {
+  async getPessoa(): Promise<PessoaViewData[]> {
+    this.pessoaService.findAll().then(async (pessoa) => {
+      return pessoa.map(async (pessoa) => {
         return {
           nomePessoa: pessoa.nome,
           totalVendido: Math.floor(Math.random() * (500 - 0)),
           nivel: string,
           qtdCliente: number,
           nicho: string,
-        }
-      })
-    })
+        };
+      });
+    });
   }
 }

@@ -9,8 +9,15 @@ export class EnderecoService {
     private enderecoRepository: Repository<Endereco>,
   ) {}
 
-  async createEndereco(cep: string, logradouro: number, numero: number, complemento?: number): Promise<Endereco[]> {
-    return this.enderecoRepository.query(`INSERT INTO ENDERECO (cep, logradouro, numero, complemento) VALUES (${cep}, ${logradouro},  ${numero}, ${complemento})`);
+  async createEndereco(
+    cep: string,
+    logradouro: number,
+    numero: number,
+    complemento?: number,
+  ): Promise<Endereco[]> {
+    return this.enderecoRepository.query(
+      `INSERT INTO ENDERECO (cep, logradouro, numero, complemento) VALUES (${cep}, ${logradouro},  ${numero}, ${complemento})`,
+    );
   }
 
   async findAll(): Promise<Endereco[]> {
@@ -18,6 +25,8 @@ export class EnderecoService {
   }
 
   async findById(idEndereco: number): Promise<Endereco[]> {
-    return this.enderecoRepository.query(`SELECT * FROM ENDERECO WHERE id_equipe = ${idEndereco}`);
+    return this.enderecoRepository.query(
+      `SELECT * FROM ENDERECO WHERE id_equipe = ${idEndereco}`,
+    );
   }
 }

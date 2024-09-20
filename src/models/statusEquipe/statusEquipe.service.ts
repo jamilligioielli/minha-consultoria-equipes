@@ -10,8 +10,10 @@ export class StatusEquipeService {
   ) {}
 
   createEquipe(nomeStatus: string): void {
-    this.statusEquipeRepository.query(`INSERT STATUS_EQUIPE (nomeStatus) VALUES (${nomeStatus})`);
-    console.log("Status inserido com sucesso");
+    this.statusEquipeRepository.query(
+      `INSERT STATUS_EQUIPE (nomeStatus) VALUES (${nomeStatus})`,
+    );
+    console.log('Status inserido com sucesso');
   }
 
   async findAll(): Promise<StatusEquipe[]> {

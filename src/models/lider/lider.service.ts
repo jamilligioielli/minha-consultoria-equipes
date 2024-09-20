@@ -9,8 +9,10 @@ export class LiderService {
     private liderRepository: Repository<Lider>,
   ) {}
 
-  async createLider(idLider: number, idConsultor: number):  Promise<Lider[]> {
-    return this.liderRepository.query(`INSERT INTO LIDER (id_lider, id_consultor) VALUES (${idLider}, ${idConsultor})`);
+  async createLider(idLider: number, idConsultor: number): Promise<Lider[]> {
+    return this.liderRepository.query(
+      `INSERT INTO LIDER (id_lider, id_consultor) VALUES (${idLider}, ${idConsultor})`,
+    );
   }
 
   async findAll(): Promise<Lider[]> {
@@ -18,6 +20,8 @@ export class LiderService {
   }
 
   async findById(idLider: number): Promise<Lider> {
-    return this.liderRepository.query(`SELECT * FROM LIDER WHERE id_lider = ${idLider}`);
+    return this.liderRepository.query(
+      `SELECT * FROM LIDER WHERE id_lider = ${idLider}`,
+    );
   }
 }

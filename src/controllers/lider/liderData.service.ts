@@ -5,9 +5,7 @@ import { LiderService } from 'src/models/lider/lider.service';
 
 @Injectable()
 export class LiderDataService {
-  constructor(private readonly liderService: LiderService,
-    
-  ) {}
+  constructor(private readonly liderService: LiderService) {}
 
   async getViewData(): Promise<LiderViewData> {
     const lider: Lider[] = await this.getLider();

@@ -5,16 +5,16 @@ import { NivelService } from 'src/models/nivel/nivel.service';
 import { EquipeService } from 'src/models/equipe/equipe.service';
 import { PessoaService } from 'src/models/pessoa/pessoa.service';
 
-
 @Injectable()
 export class EquipeDataService {
-  constructor(private readonly equipeService: EquipeService,
+  constructor(
+    private readonly equipeService: EquipeService,
     private readonly liderService: LiderService,
     private readonly nivelService: NivelService,
     private readonly pessoaService: PessoaService,
   ) {}
 
-  // async getEquipe(): Promise<EquipeViewData[]> {    
+  // async getEquipe(): Promise<EquipeViewData[]> {
   //   this.equipeService.findAll().then(async equipe => {
   //     return equipe.map(async equipe => {
   //       let idLider = await this.liderService.finById(equipe.id_lider).then(a => a.id_lider)
