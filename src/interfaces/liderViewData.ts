@@ -1,4 +1,4 @@
 export interface LiderViewData {
-  title: string;
-  cidade: string;
+  idLider: number;
+  idConsultor: string
 }
