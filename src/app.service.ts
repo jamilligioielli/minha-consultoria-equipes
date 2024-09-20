@@ -7,7 +7,7 @@ export class AppService {
 
   async getViewData(): Promise<any> {
     return {
-      title: 'Minha Consultoria | Equipes',
+      title: 'Minha Consultoria',
       nivel: 'Semente',
       consultor: {
         nome: 'Joana da Silva',

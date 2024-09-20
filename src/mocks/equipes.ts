@@ -5,6 +5,7 @@ const equipes = [
     localizacao: 'Jardim Peri Peri - SP',
     lider: 'Maria Julia',
     nivel: 'Semente',
+    linkChat: 'https://chat.whatsapp.com/RainhasDoSkinCare123',
   },
   {
     nome: 'Guerreiras do Bem-Estar',
@@ -13,6 +14,7 @@ const equipes = [
     localizacao: 'Vila Mariana - SP',
     lider: 'Ana Beatriz',
     nivel: 'Bronze',
+    linkChat: 'https://chat.whatsapp.com/GuerreirasBemEstar456',
   },
   {
     nome: 'Lendas da Beleza',
@@ -20,6 +22,7 @@ const equipes = [
     localizacao: 'Jardim Paulista - SP',
     lider: 'Fernanda Souza',
     nivel: 'Bronze',
+    linkChat: 'https://chat.whatsapp.com/LendasDaBeleza789',
   },
   {
     nome: 'Magníficas da Natura',
@@ -27,6 +30,7 @@ const equipes = [
     localizacao: 'Bela Vista - SP',
     lider: 'Cláudia Alves',
     nivel: 'Prata',
+    linkChat: 'https://chat.whatsapp.com/MagnificasDaNatura101',
   },
   {
     nome: 'Estrelas do Cuidado Pessoal',
@@ -34,6 +38,7 @@ const equipes = [
     localizacao: 'Vila Madalena - SP',
     lider: 'Mariana Costa',
     nivel: 'Bronze',
+    linkChat: 'https://chat.whatsapp.com/EstrelasCuidado102',
   },
   {
     nome: 'Divas da Cosmética',
@@ -41,6 +46,7 @@ const equipes = [
     localizacao: 'Moema - SP',
     lider: 'Gabriela Lima',
     nivel: 'Ouro',
+    linkChat: 'https://chat.whatsapp.com/DivasDaCosmetica103',
   },
   {
     nome: 'Força Feminina',
@@ -49,6 +55,7 @@ const equipes = [
     localizacao: 'Jardim Luzitânia - SP',
     lider: 'Juliana Mendes',
     nivel: 'Bronze',
+    linkChat: 'https://chat.whatsapp.com/ForcaFeminina104',
   },
   {
     nome: 'Poderosas do Perfume',
@@ -56,6 +63,7 @@ const equipes = [
     localizacao: 'Jardim São Paulo - SP',
     lider: 'Sabrina Vieira',
     nivel: 'Semente',
+    linkChat: 'https://chat.whatsapp.com/PoderosasDoPerfume105',
   },
   {
     nome: 'Brilhantes da Natura',
@@ -63,6 +71,7 @@ const equipes = [
     localizacao: 'Alto da Lapa - SP',
     lider: 'Vanessa Ribeiro',
     nivel: 'Prata',
+    linkChat: 'https://chat.whatsapp.com/BrilhantesDaNatura106',
   },
   {
     nome: 'Feras do Bem-Estar',
@@ -70,6 +79,7 @@ const equipes = [
     localizacao: 'Barra Funda - SP',
     lider: 'Carla Andrade',
     nivel: 'Bronze',
+    linkChat: 'https://chat.whatsapp.com/FerasBemEstar107',
   },
   {
     nome: 'Rainhas do Sucesso',
@@ -77,6 +87,7 @@ const equipes = [
     localizacao: 'Tatuapé - SP',
     lider: 'Patrícia Ferreira',
     nivel: 'Semente',
+    linkChat: 'https://chat.whatsapp.com/RainhasDoSucesso108',
   },
 ];
 

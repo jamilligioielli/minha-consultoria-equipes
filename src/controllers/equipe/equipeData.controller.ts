@@ -7,11 +7,9 @@ export class EquipeDataController {
 
   @Get('/')
   @Render('layouts/equipe/index')
-  index() {
-    const viewData = [];
-    viewData['title'] = 'Minha Consultoria | Equipe';
+  async index() {
     return {
-      viewData: viewData,
+      viewData: await this.equipeDataService.getViewData(),
     };
   }
 }
