@@ -1,10 +1,10 @@
 import { Entity, PrimaryColumn, Column } from 'typeorm';
 
-@Entity('CIDADE')
-export class Cidade {
+@Entity('LIDER')
+export class Lider {
   @PrimaryColumn()
-  id: number;
+  id_lider: number;
 
   @Column()
-  nome: string;
+  id_consultor: string;
 }

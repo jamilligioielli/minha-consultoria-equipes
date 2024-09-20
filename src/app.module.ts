@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import oracleConfig from 'config/oracle.config';
+import { LiderDataModule } from './controllers/lider/liderData.module';
 import { EquipeModule } from './controllers/equipe/equipe.module';
 
 @Module({
@@ -13,6 +14,7 @@ import { EquipeModule } from './controllers/equipe/equipe.module';
       envFilePath: '.env',
     }),
     EquipeModule,
+    LiderDataModule,
   ],
   controllers: [AppController],
   providers: [AppService],
