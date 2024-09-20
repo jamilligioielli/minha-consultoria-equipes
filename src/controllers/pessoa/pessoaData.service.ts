@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { PessoaViewData } from 'src/interfaces/PessoaViewData';
+import { PessoaViewData } from 'src/interfaces/pessoaViewData';
 import { PessoaService } from 'src/models/pessoa/pessoa.service';
 
 @Injectable()

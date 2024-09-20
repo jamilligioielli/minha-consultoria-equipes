@@ -1,4 +1,4 @@
-import { PessoaViewData } from 'src/interfaces/PessoaViewData';
+import { PessoaViewData } from 'src/interfaces/pessoaViewData';
 
 const consultoresEquipe: PessoaViewData[] = [
   {
