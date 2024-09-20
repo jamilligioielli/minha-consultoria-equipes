@@ -2,8 +2,8 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
-import { LiderModule } from './controllers/lider/lider.module';
 import oracleConfig from 'config/oracle.config';
+import { EquipeModule } from './controllers/equipe/equipe.module';
 
 @Module({
   imports: [
@@ -12,7 +12,7 @@ import oracleConfig from 'config/oracle.config';
       isGlobal: true,
       envFilePath: '.env',
     }),
-    LiderModule,
+    EquipeModule,
   ],
   controllers: [AppController],
   providers: [AppService],

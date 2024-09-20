@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import equipes from './mocks/equipes';
 
 @Injectable()
 export class AppService {
@@ -7,6 +8,11 @@ export class AppService {
   async getViewData(): Promise<any> {
     return {
       title: 'Minha Consultoria | Equipes',
+      nivel: 'Semente',
+      consultor: {
+        nome: 'Joana da Silva',
+      },
+      equipes: equipes,
     };
   }
 }

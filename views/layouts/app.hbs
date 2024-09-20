@@ -1,16 +1,79 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/main.css">
-    <title>{{ viewData.title }} </title>
-  </head>
-  <body>
-    <main>
-      {{> @partial-block}}
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  </body>
+<html lang="pt-BR" class="h-100">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ viewData.title }} </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  {{!-- Fonts --}}
+  <link rel="preconnect" type="text/css" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Poppins:ital,wght@0,400;0,600;0,700;0,900;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <!-- Font awesome -->
+  <script src="https://kit.fontawesome.com/1000f9c287.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+  <nav class="navbar navbar-light bg-default py-3 shadow-sm">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center gap-3">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+          <img src="/img/logo.png" alt="" width="150" class="d-inline-block align-text-top">
+        </a>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <button type="button" class="btn btn-outline-secondary" disabled>Nível: {{ viewData.nivel }}</button>
+        <div class="dropdown text-end d-flex align-items-center gap-1">
+          {{ viewData.consultor.nome }}
+          <a href="#" class="d-block link-dark text-decoration-none">
+            <img src="/img/avatar.jpg" alt="mdo" width="48" height="48" class="rounded-circle">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-light p-4">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">
+              <span data-feather="home"></span>
+              Inicio
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/equipe">
+              <span data-feather="shopping-cart"></span>
+              Minha equipe
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/vendas">
+              <span data-feather="layers"></span>
+              Vendas
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    </div>
+    </nav>
+  </header>
+  {{!-- Begin Page Content --}}
+  {{> @partial-block}}
+  {{!-- End Page Content --}}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
 </html>

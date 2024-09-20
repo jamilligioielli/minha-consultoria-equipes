@@ -1,41 +1,78 @@
 {{#> app}}
-  <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light"></nav>
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+ <section class="py-2 bg-green-light">
+  <div class="container text-light">
+    <div class="row mb-0">
+      <div class="col-sm d-flex align-items-center">
+        <div class="row py-3">
+          <h1 class="fw-bold mt-3">
+            Encontre sua equipe
+          </h1>
+          <p class="my-4">
+            E começe já a acelerar suas vendas e fortalecer a confiança de seus clientes!
+          </p>
+        </div>
       </div>
     </div>
-  </nav>
-</header>
-  <p>sou especifico do index</p>
+  </div>
+ </section>
+ <section >
+  <div class="container py-3">
+    <div class="d-flex align-items-center gap-3 my-3">
+      <span>Você está em: </span>
+      <div class="d-flex align-items-center gap-3">
+        <button type="button" class="btn btn-brand rounded-circle">
+          <i class="bi bi-geo-alt"></i>
+        </button>
+        <span>
+          {{!-- {{ viewData.bairro }} --}}
+          Jardim Maria Luiza
+        </span>
+      </div>
+    </div>
+    <div class="row">
+      {{#each viewData.equipes}}
+      <div class="card w-100 my-4">
+        <div class="card-body">
+          <div class="row align-items-center">
+            <div class="col-10">
+              <h5 class="card-title">{{ this.nome }}</h5>
+              <p class="card-text">{{ this.descricao }}</p>
+              <div class="d-flex align-items-center gap-3">
+                <button type="button" class="btn btn-brand rounded-circle">
+                  <i class="bi bi-geo-alt"></i>
+                </button>
+                <span>
+                  {{ this.localizacao}}
+                </span>
+              </div>
+              <div class="d-flex align-items-center gap-3 ink-dark text-decoration-none rounded-circle mt-2">
+                <img src="/img/avatar2.jpg" alt="mdo" width="42" height="40" class="rounded-circle">
+                <span>{{ this.lider }}</span>
+              </div>
+            </div>
+            <div class="col d-flex flex-column gap-3">
+              <button type="button" class="btn btn-outline-secondary" disabled>Nível: {{ this.nivel }}</button>
+              <a href="#" class="btn btn-brand">Pedir para entrar</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+       {{else}}
+        <p>No team members available.</p>
+      {{/each}}
+    </div>
+    {{!-- <div>
+      <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Proximo</a></li>
+      </ul>
+    </nav>
+    </div> --}}
+  </div>
+ </section>
 {{/app}}

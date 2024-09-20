@@ -1,1 +1,177 @@
 /* Aplicar aqui o CSS Global */
+/* Color scheme */
+:root {
+	/* Colors */
+	--green: #005246;
+	--green-light: rgb(0, 82, 70, 80%);
+	--yellow: #F9D599;
+	--red: #D1030A;
+	--pink: #E5004B;
+	--red: #A02E00;
+
+	--black: #000;
+	--white: #fff;
+	--gray: #F5F5F5;
+	--gray-light: #F5F5F5;
+	--gray-light-hover: #E6E6E6;
+  --gray-dark: #767676;
+  --text-color: #1E1E1E;
+	--background-color: #fafafa;
+	--background-brand: #ED6F2E;
+	--background-light: #ed6e2ea5;
+
+	/* Fonts */
+    --title-font: "Poppins", sans-serif;
+    --body-font: "Open Sans", sans-serif;
+
+	/* Border-Radius*/
+	--radius-size: 0.625rem;
+}
+
+/* Reset */
+html{
+    overflow-x: hidden;
+}
+
+body{
+  font-family: var(--body-font)!important;
+	background-color: var(--background-color)!important;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--title-font)!important;
+}
+
+a{
+	text-decoration: none!important;
+}
+
+li{
+	list-style: none;
+}
+
+/* Base */
+
+.section{
+    padding: 4.5rem  0;
+}
+
+.pagination .page-link{
+  color: var(--background-brand)!important;
+  border-color: var(--background-brand)!important;
+}
+
+.page-link:focus{
+  background-color: var(--gray-light);
+  box-shadow: 0 0 0 .25rem var(--background-light)
+}
+
+.nav-link{
+  color: var(--background-brand)!important;
+}
+
+/* Backgrounds */
+.bg-white{
+	--bs-bg-opacity: 1;
+    background-color: var(--white)!important;
+}
+
+.bg-pink {
+	background: var(--pink);
+}
+
+.bg-green-light {
+	background: var(--green-light);
+}
+
+.bg-default {
+	background: var(--gray);
+}
+/* Borders */
+
+/* Buttons */
+.btn-brand {
+  color: #fff;
+  background-color: var(--background-brand)!important;
+  /* border-color: var(--yellow); */
+}
+.btn-brand:hover {
+  color: #fff;
+  background-color: var(--background-light);
+  border-color: var(--background-brand);
+}
+
+.btn-check:focus + .btn-brand, .btn-brand:focus {
+  color: #fff;
+  border-color: var(--background-brand);
+  box-shadow: 0 0 0 0.1rem var(--background-light);
+}
+
+.btn-default {
+  color: var(--text-color);
+  background-color: var(--gray-light)!important;
+  border-color: var(--gray-dark);
+}
+.btn-default:hover {
+  color: #fff;
+  background-color: var(--gray-light);
+  border-color: var(--gray-light-hover);
+}
+
+.btn-check:focus + .btn-red, .btn-red:focus {
+  color: #fff;
+  background-color: var(--gray-light);
+  border-color: var(--gray-light-hover);
+  box-shadow: 0 0 0 0.1rem var(--gray);
+}
+
+
+/* Header */
+.divider{
+    height: 20px;
+    width: 2px;
+}
+
+.size-icons-sm{
+	font-size: 1.5rem;
+}
+
+.size-icons{
+	font-size: 2rem;
+}
+
+.size-icons-lg{
+	font-size: 2.5rem;
+}
+/* Links */
+.dropdown-item{
+	color: var(--black)!important;
+}
+.dropdown-item:focus,
+.dropdown-item:hover{
+	color: var(--white)!important;
+	background-color: var(--red-light)!important;
+}
+/* Input Search Icon */
+.has-search .form-control {
+	height: 100%!important;
+	font-size: 12px!important;
+	border-radius: 10px 0px 0px 10px!important;
+}
+
+.has-search .form-control-feedback {
+	position: absolute;
+	z-index: 2;
+	display: block;
+	width: 4rem;
+	height: 3rem;
+	font-size: 1.2rem;
+	line-height: 2.375rem;
+	text-align: center;
+	pointer-events: none;
+	color: #aaa;
+}
+
+
+/* Responsivity */
+
