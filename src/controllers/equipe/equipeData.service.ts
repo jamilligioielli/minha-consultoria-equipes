@@ -6,6 +6,7 @@ import { EquipeService } from 'src/models/equipe/equipe.service';
 import { PessoaService } from 'src/models/pessoa/pessoa.service';
 import equipes from 'src/mocks/equipes';
 import consultoresEquipe from 'src/mocks/consultoresEquipe';
+import { AppService } from 'src/app.service';
 
 @Injectable()
 export class EquipeDataService {
@@ -14,6 +15,7 @@ export class EquipeDataService {
     private readonly liderService: LiderService,
     private readonly nivelService: NivelService,
     private readonly pessoaService: PessoaService,
+    private readonly appService: AppService,
   ) {}
 
   async getEquipe(): Promise<EquipeViewData[]> {
@@ -40,19 +42,34 @@ export class EquipeDataService {
     });
     return equipeData;
   }
-  async getViewData(): Promise<any> {
+  async getViewData(id?: number): Promise<any> {
     return {
       nivel: 'Semente',
-      consultor: {
-        nome: 'Joana da Silva',
-      },
+      consultor: this.appService.getConsultorLogado(),
       equipe: {
-        ...equipes[0],
+        ...equipes.filter((e) => e.idEquipe == id)[0],
         ciclo: 'Ciclo 25 - Agosto a Setembro de 2024',
         consultores: consultoresEquipe.sort(
           (a, b) => b.totalVendido - a.totalVendido,
         ),
+        totalLucro: this.getTotal('totalLucro'),
+        totalInvestido: this.getTotal('totalInvestido'),
+        totalVendido: this.getTotal('totalVendido'),
+        nicho: 'Faces',
+        totalVendas: this.getTotalVendas(),
       },
     };
+  }
+
+  getTotal(campo: string) {
+    return consultoresEquipe
+      .map((e) => e[campo])
+      .reduce((acc, curr) => acc + curr, 0);
+  }
+
+  getTotalVendas() {
+    return consultoresEquipe
+      .map((e) => e.vendasRealizadas.length)
+      .reduce((acc, curr) => acc + curr, 0);
   }
 }

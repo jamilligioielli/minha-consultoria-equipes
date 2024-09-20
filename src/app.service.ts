@@ -9,10 +9,16 @@ export class AppService {
     return {
       title: 'Minha Consultoria',
       nivel: 'Semente',
-      consultor: {
-        nome: 'Joana da Silva',
-      },
       equipes: equipes,
+      consultor: this.getConsultorLogado(),
+    };
+  }
+
+  getConsultorLogado() {
+    return {
+      nome: 'Joana da Silva',
+      equipe: 1,
+      localizacao: 'Jardim Peri Peri - SP',
     };
   }
 }

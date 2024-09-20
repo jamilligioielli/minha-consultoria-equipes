@@ -42,24 +42,24 @@
     </div>
     <div class="collapse" id="navbarToggleExternalContent">
       <div class="bg-default p-4">
-      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-default sidebar collapse">
+      <nav class="col-md-4 col-lg-3 d-md-block bg-default">
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">
-              <span data-feather="home"></span>
+            <a class="nav-link active d-flex align-items-center gap-2" aria-current="page" href="/">
+              <span><i class="bi bi-house"></i></span>
               Inicio
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/equipe">
-              <span data-feather="shopping-cart"></span>
+            <a class="nav-link d-flex align-items-center gap-2" href="/equipe/{{ viewData.consultor.equipe }}">
+              <span> <i class="bi bi-people"></i></span>
               Minha equipe
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/vendas">
-              <span data-feather="layers"></span>
+          <li class="nav-item w-100">
+            <a class="nav-link d-flex align-items-center gap-2" href="/vendas">
+              <span><i class="bi bi-currency-dollar"></i></span>
               Vendas
             </a>
           </li>

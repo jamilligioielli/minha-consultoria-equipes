@@ -1,5 +1,6 @@
 const equipes = [
   {
+    idEquipe: 1,
     nome: 'Rainhas do Skin Care',
     descricao: 'Uma equipe boa demais, que vende produtos demais',
     localizacao: 'Jardim Peri Peri - SP',
@@ -8,6 +9,7 @@ const equipes = [
     linkChat: 'https://chat.whatsapp.com/RainhasDoSkinCare123',
   },
   {
+    idEquipe: 2,
     nome: 'Guerreiras do Bem-Estar',
     descricao:
       'Focadas em produtos de alta qualidade e atendimento personalizado',
@@ -17,6 +19,7 @@ const equipes = [
     linkChat: 'https://chat.whatsapp.com/GuerreirasBemEstar456',
   },
   {
+    idEquipe: 3,
     nome: 'Lendas da Beleza',
     descricao: 'Transformando beleza em poder, equipe dedicada e talentosa',
     localizacao: 'Jardim Paulista - SP',
@@ -25,6 +28,7 @@ const equipes = [
     linkChat: 'https://chat.whatsapp.com/LendasDaBeleza789',
   },
   {
+    idEquipe: 4,
     nome: 'Magníficas da Natura',
     descricao: 'Vendendo produtos premium com dedicação e paixão',
     localizacao: 'Bela Vista - SP',
@@ -33,6 +37,7 @@ const equipes = [
     linkChat: 'https://chat.whatsapp.com/MagnificasDaNatura101',
   },
   {
+    idEquipe: 5,
     nome: 'Estrelas do Cuidado Pessoal',
     descricao: 'Equipe motivada, especializada em cuidados com a pele',
     localizacao: 'Vila Madalena - SP',
@@ -41,6 +46,7 @@ const equipes = [
     linkChat: 'https://chat.whatsapp.com/EstrelasCuidado102',
   },
   {
+    idEquipe: 6,
     nome: 'Divas da Cosmética',
     descricao: 'Superando metas com inovação e entusiasmo',
     localizacao: 'Moema - SP',
@@ -49,6 +55,7 @@ const equipes = [
     linkChat: 'https://chat.whatsapp.com/DivasDaCosmetica103',
   },
   {
+    idEquipe: 7,
     nome: 'Força Feminina',
     descricao:
       'Apoiando o empoderamento feminino através da venda de cosméticos',
@@ -58,6 +65,7 @@ const equipes = [
     linkChat: 'https://chat.whatsapp.com/ForcaFeminina104',
   },
   {
+    idEquipe: 8,
     nome: 'Poderosas do Perfume',
     descricao: 'Especialistas em fragrâncias, vendendo confiança e estilo',
     localizacao: 'Jardim São Paulo - SP',
@@ -66,6 +74,7 @@ const equipes = [
     linkChat: 'https://chat.whatsapp.com/PoderosasDoPerfume105',
   },
   {
+    idEquipe: 9,
     nome: 'Brilhantes da Natura',
     descricao: 'Focadas em resultados e crescimento contínuo',
     localizacao: 'Alto da Lapa - SP',
@@ -74,6 +83,7 @@ const equipes = [
     linkChat: 'https://chat.whatsapp.com/BrilhantesDaNatura106',
   },
   {
+    idEquipe: 10,
     nome: 'Feras do Bem-Estar',
     descricao: 'Combinando vendas e consultoria de alta performance',
     localizacao: 'Barra Funda - SP',
@@ -82,6 +92,7 @@ const equipes = [
     linkChat: 'https://chat.whatsapp.com/FerasBemEstar107',
   },
   {
+    idEquipe: 11,
     nome: 'Rainhas do Sucesso',
     descricao: 'Liderando com paixão e atingindo resultados extraordinários',
     localizacao: 'Tatuapé - SP',

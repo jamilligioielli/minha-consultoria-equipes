@@ -10,6 +10,7 @@
           <p class="my-4">
             E começe já a acelerar suas vendas e fortalecer a confiança de seus clientes!
           </p>
+          </div>
         </div>
       </div>
     </div>
@@ -24,8 +25,7 @@
           <i class="bi bi-geo-alt"></i>
         </button>
         <span>
-          {{!-- {{ viewData.bairro }} --}}
-          Jardim Maria Luiza
+          {{ viewData.consultor.localizacao }}
         </span>
       </div>
     </div>
@@ -33,7 +33,7 @@
       {{#each viewData.equipes}}
       <div class="card w-100 my-4">
         <div class="card-body">
-          <div class="row align-items-center">
+          <div class="row gap-3 align-items-center">
             <div class="col-10">
               <h5 class="card-title">{{ this.nome }}</h5>
               <p class="card-text">{{ this.descricao }}</p>
@@ -50,29 +50,26 @@
                 <span>{{ this.lider }}</span>
               </div>
             </div>
+            {{#if viewData.consultor}}
+             {{#if viewData.consultor.equipe}}
             <div class="col d-flex flex-column gap-3">
               <button type="button" class="btn btn-outline-secondary" disabled>Nível: {{ this.nivel }}</button>
-              <a href="#" class="btn btn-brand">Pedir para entrar</a>
+              <a href="/equipe/{{ this.idEquipe }}" class="btn btn-success">Você é membro</a>
+            </div>
+            {{/if}}
+            {{else}}
+            <div class="col d-flex flex-column gap-3">
+              <button type="button" class="btn btn-outline-secondary" disabled>Nível: {{ this.nivel }}</button>
+              <a href="/equipe/{{ this.idEquipe }}" class="btn btn-brand">Pedir para entrar</a>
             </div>
           </div>
-
+          {{/if}}
         </div>
       </div>
        {{else}}
         <p>Sem equipes disponíveis...</p>
       {{/each}}
     </div>
-    {{!-- <div>
-      <nav aria-label="Page navigation example">
-      <ul class="pagination">
-        <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">Proximo</a></li>
-      </ul>
-    </nav>
-    </div> --}}
   </div>
  </section>
 {{/app}}
